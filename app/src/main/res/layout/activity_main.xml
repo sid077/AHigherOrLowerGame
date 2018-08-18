@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="382dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/textView2"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="81dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="379dp"
+        android:layout_height="31dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textAppearance="@color/colorPrimaryDark"
+        android:text="I'm thinking of a number between 0 and 20."
+        tools:layout_editor_absoluteX="4dp"
+        android:layout_margin="5dp"
+        tools:layout_editor_absoluteY="4dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="374dp"
+        android:layout_height="34dp"
+        android:text="Can you Guess it ?"
+
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        tools:layout_editor_absoluteX="3dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#1A237E"
+        android:onClick="predict"
+        android:text="Guess"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintTop_toBottomOf="@id/editText" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#1A237E"
+        android:text="Play Again"
+        app:layout_constraintTop_toBottomOf="@id/button"
+        android:gravity="center"
+        android:onClick="regenerateRandomNumber"
+        app:layout_constraintStart_toEndOf="@id/button"
+        android:layout_margin="50dp"
+        android:textColor="@android:color/background_light"
+        tools:layout_editor_absoluteX="140dp"
+        tools:layout_editor_absoluteY="194dp" />
+
+
+</android.support.constraint.ConstraintLayout>
